@@ -52,7 +52,7 @@ function Page({ params }) {
         >
             <label htmlFor="exampleFormControlInput1" className="form-label">Ingresar Género</label>
             <input className="form-control " id="exampleFormControlInput1"
-                placeholder="Ingrese un Género"
+                placeholder="Ingrese un Género" maxlength="20"
                 {...register("title", { required: true })}
             />
             {errors.title && (
@@ -60,8 +60,8 @@ function Page({ params }) {
             )}
             <div className="mb-4"></div>
             <label htmlFor="exampleFormControlTextarea1 " className="form-label">Descripción</label>
-            <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"
-                placeholder="Ingrese descripción del género"
+            <textarea className="form-control" id="exampleFormControlTextarea1" 
+                placeholder="Ingrese descripción del género" maxlength="80"
                 {...register("description", { required: true })}
             />
             {errors.description && (

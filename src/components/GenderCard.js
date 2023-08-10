@@ -15,13 +15,13 @@ export const GenderCard = ({ gender }) => {
     };
 
     return (
-        <div className="p-3 mb-2 bg-light text-dark mb-3  shadow-sm p-3 mb-5 bg-body rounded" style={{width: "18rem"}}
+        <div className=" p-3 mx-2 my-3 bg-light text-dark   shadow-sm p-3  bg-body rounded" style={{width: "18rem"}}
          >
             <h4>{gender.title}</h4>
-            <p >{gender.description}</p>
+            <p className="overflow-auto" style={{ maxHeight: "6em" }}>{gender.description}</p>
             <div>
 
-            <button class="btn btn-outline-danger me-2 pt-0" onClick={(e) => {
+            <button className="btn btn-outline-danger me-2 pt-0" onClick={(e) => {
                 e.stopPropagation();
                 handleDelete(); 
             }}>
