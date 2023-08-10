@@ -25,7 +25,7 @@ function Page() {
           ))}
         </select>
       </div>
-      <div className="container d-flex flex-wrap  m-3">
+      <div className="container d-flex flex-wrap ">
         {genders.map((gender) => (
           <GenderCard gender={gender} key={gender.id}></GenderCard>
         ))}

@@ -15,7 +15,7 @@ export const GenderCard = ({ gender }) => {
     };
 
     return (
-        <div className=" p-3 mx-2 my-3 bg-light text-dark   shadow-sm p-3  bg-body rounded" style={{width: "18rem"}}
+        <div className=" p-3 mx-auto my-3 bg-light text-dark   shadow-sm p-3  bg-body rounded" style={{width: "18rem"}}
          >
             <h4>{gender.title}</h4>
             <p className="overflow-auto" style={{ maxHeight: "6em" }}>{gender.description}</p>
