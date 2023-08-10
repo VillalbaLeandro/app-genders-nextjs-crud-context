@@ -6,7 +6,7 @@ import { GenderCard } from "../components/GenderCard";
 function Page() {
   const { genders } = useGenders();
   return (
-    <div>
+    <div className="d-flex flex-column align-items-center mt-3 ">
       {genders.map((gender) => (
         <GenderCard gender = {gender} key={gender.id}></GenderCard>
       ))}

@@ -5,11 +5,16 @@ export function useLocalStorage(key, initialState) {
 
     useEffect(() => {
         const item = localStorage.getItem(key);
-        const genders = JSON.parse(item);
-        if (genders) {
-            setState(genders);
+        if (item) {
+            try {
+                const parsedItem = JSON.parse(item);
+                setState(parsedItem);
+            } catch (error) {
+                console.error("Error parsing localStorage item:", error);
+            }
         }
-    }, []); 
+    }, [key]); 
+    
     useEffect(() => {
         localStorage.setItem(key, JSON.stringify(state));
     }, [state]);
