@@ -28,7 +28,7 @@ export const GenderCard = ({ gender }) => {
                 Delete
             </button>
             <button className="btn btn-outline-success pt-0" 
-            onClick={() => router.push(`/edit/${gender.id}`)}>
+            onClick={() => router.push(`pages/genders/edit/${gender.id}`)}>
                 Edit
             </button>
             </div>
